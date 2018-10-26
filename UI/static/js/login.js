@@ -31,7 +31,7 @@ function login(e){
         
          window.location.href = '../templates/login.html'
       }
-      else if(data["message"]=="You have succesfully logged in" && username == "naome"){
+      else if(data["message"]=="You have succesfully logged in" && username == "admin"){
         var token= data['token']
         localStorage.setItem("token",token)
         window.location.href = '../templates/admin.html'}
