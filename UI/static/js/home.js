@@ -17,7 +17,7 @@ function postorder(e){
     let food_name = document.getElementById('food_name').value;
     let quantity = document.getElementById('quantity').value;
     let location = document.getElementById('location').value;
-    fetch("http://127.0.0.1:5000/api/v1/users/orders",{
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/users/orders",{
       method:'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -52,7 +52,7 @@ function postorder(e){
 document.getElementById('foods').addEventListener("load", getmenu());
 var token = localStorage.getItem('token')
 function getmenu() {
-    fetch("http://127.0.0.1:5000/api/v1/menu", {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu", {
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json',

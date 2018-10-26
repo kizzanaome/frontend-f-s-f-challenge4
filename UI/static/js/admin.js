@@ -47,7 +47,7 @@ function addfood(e){
 // Fetching menu_items from the database
 document.getElementById('foods')
 var token = localStorage.getItem('token')
-    fetch("http://127.0.0.1:5000/api/v1/menu", {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu", {
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json',

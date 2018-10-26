@@ -14,7 +14,7 @@ window.onclick = function(event) {
 document.getElementById('content').addEventListener("load", getmenu());
 var token = localStorage.getItem('token');
 function getmenu() {
-    fetch("http://127.0.0.1:5000/api/v1/orders", {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/orders", {
         method: "GET",
         headers: {
              Authorization: `Bearer ${token}`,
