@@ -18,7 +18,7 @@ Fast-Food-Fast is a food delivery service app for a restaurant.
 - [CSS](https://css-tricks.com/) - Style sheet language 
 - [JavaScript](https://www.javascript.com/) - High-level, interpreted programming language
 
-##Usage
+## Usage
 - User first has to create an account.
 - User can then login and have access to all the other parts of the app.
 
