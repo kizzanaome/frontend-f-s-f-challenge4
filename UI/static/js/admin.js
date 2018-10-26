@@ -17,7 +17,7 @@ function addfood(e){
     e.preventDefault();
     let food_name = document.getElementById('food_name').value;
     let price = document.getElementById('price').value;
-    fetch("http://127.0.0.1:5000/api/v1/menu",{
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu",{
       method:'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
