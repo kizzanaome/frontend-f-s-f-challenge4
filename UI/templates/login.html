@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href = "../static/css/login.css" rel = "stylesheet">
+</head>
+<body>
+
+	<div class="wrapper">
+		
+		<div class="form">
+			<form method ="POST" id = "loginform">
+				<h2>Please Login</h2>
+				
+				<label for = "username">username</label>
+				<input type = "username" name = "username" id = "username" required="enter"/>
+				
+
+				<label for = "password">Password</label>
+				<input type = "password" name = "password" id = "password" required  />
+				
+				<p><input type = "checkbox" name = "checkbox"  onclick = "show()" />&nbsp;&nbsp;Show Password</p>
+
+				
+
+				<button type = "submit" class = "btn" name = "submit" value = "login">Login</button>
+				
+			</form>
+		</div>
+	</div>
+<script src = "../static/js/show.js"></script>
+<script src="../static/js/login.js"></script>
+</body>
+</html>
