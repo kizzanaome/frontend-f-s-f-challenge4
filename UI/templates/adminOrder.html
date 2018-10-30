@@ -68,15 +68,16 @@
                                            <h3>Details View</h3>
                                            <hr>
                                            <ol>
-                                               <li>Order ID&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;010</li>
-                                               <li>Ordered Item &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp; Pizza</li>
-                                               <li>Customer Name &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;Anonymous</li>
-                                               <li>Customer Location&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;Dark Web</li>
-                                               <li>Order Time &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;01-19-2015 10:20 a.m</li>
-                                               <li>Order Status &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;completed</li>
-                                               <li>Order Price &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;UgX 20000</li>
-                                               <li>Order Price &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;UgX 20000</li>
-                                               <li>
+                                               <li id="order-id"></li>
+                                               <li id="item-name"></li>
+                                               <li id="quantity"></li>
+                                               <li id="client-location"></li>
+                                               <li id="time-stamp"></li>
+                                               <li id="Status"></li>
+                                               <li id="price"></li>
+                                               <li id="username"></li>
+
+                                                <li>
                                                    <a href = "#" >Remove From list</a>
                                                 </li>                                               
                                            </ol>
@@ -87,9 +88,9 @@
                                   </div>
                             </form>
                           </div>
-                        
+                         
 
-                    <table id = "list">
+                    <!-- <table id = "list">
                     <thead>
                         <th>No.</th>
                         <th>Item</th>
@@ -161,12 +162,12 @@
                             <td>
                                 <a href="#" id = "accept">Accept</a>
                                 <a href="#" id = "decline">Decline</a>
-                            </td>
-                            <td>
+                            </td>-->
+                             <!-- <td>
                                     <a href="#" onclick = "document.getElementById('detail').style.display = 'block'">View</a>
-                                </td>
+                                </td> -->
                             
-                        </tr>
+                        <!-- </tr>
 
                         <tr>
                                 <td>2</td>
@@ -199,15 +200,13 @@
                                         </td>                                  
                                 </tr>
                     </tbody>
-                </table> 
-                
+                </table>   -->
+
+                </div>
+                <!-- <script src="../static/js/order.js"></script>  -->
                 <script src="../static/js/edit.js"></script>  
-                <script src="../static/js/login.js"></script>  
-                <script src="../static/js/signup.js" ></script> 
-                <script src="../static/js/show.js" ></script>
-                <script src="../static/js/order.js" ></script>
-                <script src="../static/js/history.js" ></script>
-                <script src="../static/js/admin.js"></script>
+               
+ 
  
 
 </body>

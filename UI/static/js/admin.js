@@ -10,6 +10,7 @@ window.onclick = function(event) {
     }
 }
 
+
 var token = localStorage.getItem('token')
 
 document.getElementById('menu').addEventListener('submit', addfood);
@@ -103,7 +104,7 @@ var token = localStorage.getItem('token')
 
                 input.setAttribute("id", "edit-Food-btn");
                 input.setAttribute("value", "Edit");
-                input.setAttribute("onclick", edit_model(this));
+                input.setAttribute("onclick", "edit_model(this)");
                 form.appendChild(input);
                 add_div.appendChild(form);
                 food_card.appendChild(add_div);

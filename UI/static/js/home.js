@@ -9,6 +9,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+var id=localStorage.getItem('order_id')
 
 var token = localStorage.getItem('token')
 document.getElementById('placeorder').addEventListener('submit', postorder);
@@ -31,7 +32,7 @@ function postorder(e){
     .then((data) => {
         console.log(data.message)
         console.log(data)
-    if (data.message === "you have succesfully placed order"){
+    if (data.message == "you have succesfully placed order"){
         alert(data["message"])
         window.location.href = '../templates/home.html'
     }else if (data.message === "Order has already been placed"){
@@ -73,6 +74,8 @@ function getmenu() {
                 // Creating image div
                 let img_div = document.createElement("div");
                 img_div.setAttribute("class", "img");
+                img_div.setAttribute("id", menu_item["food_name"]);
+                img_div.setAttribute("onclick", "order_model(this)");
                 let img = document.createElement("img");
                 img.setAttribute("src","../static/images/menu5.jpg");
                 img.setAttribute("alt", "food");
@@ -98,17 +101,15 @@ function getmenu() {
                 food_card.appendChild(desc_div);
 
                 // add the footer div here
-
                 
                 let add_div = document.createElement("div")
                 add_div.setAttribute("class","add");
-                let form = document.createElement("form");
-                let input = document.createElement("input");
-                input.setAttribute("type", "submit");
-                input.setAttribute("id", "add-btn");
-                input.setAttribute("value", "order");
-                input.setAttribute("onclick", order_model(this));
-                form.appendChild(input);
+                add_div.setAttribute("id", "add-btn")
+                let input = document.createElement("p");
+                input.textContent= "Place Order"
+                input.setAttribute("id", menu_item["food_name"]);
+                input.setAttribute("onclick", "order_model(this)");
+                // form.appendChild(input);
                 // add_div.appendChild(form);
                 // food_card.appendChild(add_div);
                 
@@ -120,7 +121,7 @@ function getmenu() {
                 // a_tag.setAttribute("onclick", view_model);
                 // a_tag.textContent="View more"
                 // form.appendChild(a_tag);
-                add_div.appendChild(form);
+                add_div.appendChild(input);
                 food_card.appendChild(add_div);
 
 
@@ -138,7 +139,8 @@ function getmenu() {
 }
 
 function order_model(module){
-    console.log(module)
+    console.log(module.id)
+    document.getElementById("food_name").value = module.id;
     document.getElementById('order').style.display = 'block';
 }
 
@@ -146,4 +148,6 @@ function view_model(view){
     console.log(view)
     document.getElementById('food').style.display = 'block';
 }
+
+
 
