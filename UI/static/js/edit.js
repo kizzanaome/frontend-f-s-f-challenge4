@@ -24,7 +24,9 @@ fetch(url,{
 ).then(data=>{
 console.log(123)
 console.log(data)
-let admin_orders = document.getElementById("content");
+let admin_orders = document.getElementById("contents");
+let adminview_orders = document.getElementById("detail");
+
 // let form = document.createElement("form");
 let div = document.createElement("div");
 div.setAttribute("class", "content-wrapper");
