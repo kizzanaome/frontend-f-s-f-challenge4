@@ -10,6 +10,7 @@ window.onclick = function(event) {
     }
 }
 
+// Adding menu_items from the database
 
 var token = localStorage.getItem('token')
 
@@ -41,6 +42,11 @@ function addfood(e){
     }else if (data.message ==="foodname should be in characters"){
         alert(data.message) 
     }
+    else if (data.message=="item deleted"){
+        alert(data.message)
+        window.location.href = '../templates/admin.html'
+        }
+      
     })
   }
 
@@ -63,6 +69,8 @@ var token = localStorage.getItem('token')
             let count = 0
             for (count; count<menu_items.length; count++) {
                 let menu_item = menu_items[count];
+                item_id = menu_item["food_id"];
+                item_name = menu_item["food_id"];
                 item_name = menu_item["food_name"];
                 item_price = menu_item["price"];
                 let food_card = document.createElement("div");
@@ -102,22 +110,16 @@ var token = localStorage.getItem('token')
                 let input = document.createElement("input");
                 input.setAttribute("type", "submit");
 
-                input.setAttribute("id", "edit-Food-btn");
-                input.setAttribute("value", "Edit");
-                input.setAttribute("onclick", "edit_model(this)");
+                input.setAttribute("id", menu_item["food_id"]);
+                input.setAttribute("class", "view");
+                input.setAttribute("value", "Delete");
+                input.setAttribute("onclick", "Delete_order(this)");
                 form.appendChild(input);
                 add_div.appendChild(form);
                 food_card.appendChild(add_div);
 
-            
-                // let a_tag = document.createElement("a");
-                // form.setAttribute("class", "view");
-                // form.setAttribute("id", "view");
-                // form.setAttribute("onclick", view_more )
-
-
                 foods.appendChild(food_card);
-                // console.log(menu_items[count]);
+               
             }
         
         })
@@ -129,6 +131,28 @@ function edit_model(module){
     document.getElementById('editFood').style.display = 'block';
 }
 
-{/* function view_model(){
-document.getElementById('food').style.display = 'block';
-} */}
+function Delete_order(module){
+    console.log(module.id)
+    my_id = module.id;
+
+    fetch("http://127.0.0.1:5000/api/v1/menu/"+my_id, {
+        method: "DELETE",
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-type':'application/json',
+             Authorization: `Bearer ${token}`
+        }
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            alert(data.message)
+            if (data.message=="item deleted"){
+                alert(data.message)
+                window.location.href = '../templates/admin.html'
+                }
+        });
+
+    }
+
+

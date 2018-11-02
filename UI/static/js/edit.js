@@ -11,7 +11,7 @@ window.onclick = function(event) {
 
 // fetching all orders from the database
 
-// document.getElementById('content').addEventListener("load", getmenu());
+
 var token = localStorage.getItem('token');
 const url="http://127.0.0.1:5000/api/v1/orders";
 console.log(token)
@@ -56,8 +56,6 @@ let td5 = document.createElement("td");
 let td6 = document.createElement("td");
 let td7 = document.createElement("td");
 let td8 = document.createElement("td")
-
-
 
 td1 = tr.insertCell(0);
 td2 = tr.insertCell(1);
@@ -131,7 +129,6 @@ function View_modal(module){
             document.getElementById('detail').style.display = 'block';
         });
 }
-
 
 
 function Accept_order(module){
