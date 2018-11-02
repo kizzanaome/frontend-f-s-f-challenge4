@@ -13,7 +13,7 @@ window.onclick = function(event) {
 
 
 var token = localStorage.getItem('token');
-const url="http://127.0.0.1:5000/api/v1/orders";
+const url="https://noma-fast-food-fast-db.herokuapp.com/api/v1/orders";
 console.log(token)
 fetch(url,{
     method:'GET',
@@ -106,7 +106,7 @@ function View_modal(module){
     console.log(module.id)
     my_id = module.id;
 
-    fetch("http://127.0.0.1:5000/api/v1/orders/"+my_id, {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/orders/"+my_id, {
         method: "GET",
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -135,7 +135,7 @@ function Accept_order(module){
     console.log(module.id)
     my_id = module.id;
 
-    fetch("http://127.0.0.1:5000/api/v1/orders/"+my_id, {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/orders/"+my_id, {
         method: "PUT",
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -163,7 +163,7 @@ function Accept_order(module){
         console.log(module.id)
         my_id = module.id;
     
-        fetch("http://127.0.0.1:5000/api/v1/orders/"+my_id, {
+        fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/orders/"+my_id, {
             method: "PUT",
             headers: {
                 'Accept': 'application/json, text/plain, */*',

@@ -19,7 +19,7 @@ function addfood(e){
     e.preventDefault();
     let food_name = document.getElementById('food_name').value;
     let price = document.getElementById('price').value;
-    fetch("http://127.0.0.1:5000/api/v1/menu",{
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu",{
       method:'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -54,7 +54,7 @@ function addfood(e){
 // Fetching menu_items from the database
 document.getElementById('foods')
 var token = localStorage.getItem('token')
-    fetch("http://127.0.0.1:5000/api/v1/menu", {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu", {
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json',
@@ -135,7 +135,7 @@ function Delete_order(module){
     console.log(module.id)
     my_id = module.id;
 
-    fetch("http://127.0.0.1:5000/api/v1/menu/"+my_id, {
+    fetch("https://noma-fast-food-fast-db.herokuapp.com/api/v1/menu/"+my_id, {
         method: "DELETE",
         headers: {
             'Accept': 'application/json, text/plain, */*',
