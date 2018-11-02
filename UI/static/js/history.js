@@ -78,6 +78,9 @@ function getmenu() {
            history_table.appendChild(tbody);
            div1.appendChild(history_table);
            order_history.appendChild(div1);
+           if (data["message"]=="You have not orderd for any food so you have no order history"){
+            alert(data["msg"])
+         }
         }
         )}
     

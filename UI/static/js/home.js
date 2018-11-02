@@ -32,14 +32,14 @@ function postorder(e){
     .then((data) => {
         console.log(data.message)
         console.log(data)
-    if (data.message == "you have succesfully placed order"){
-        alert(data["message"])
-        window.location.href = '../templates/home.html'
+    if (data.msg == "Token has expired"){
+        alert(data["msg"])
+        window.location.href = '../templates/login.html'
     }else if (data.message === "Order has already been placed"){
         alert(data["message"])        
-    }else if (data.msg ==="Token has expired"){
-        alert(data.msg) 
-        window.location.href = '../templates/login.html'      
+    }else if (data.message =="you have succesfully placed order"){
+        alert(data.message) 
+        window.location.href = '../templates/home.html'      
     }else if (data.msg ==="food_item doesnt exist on the food menu"){
         alert(data.msg) 
       }else if(data.message === "Please avoid adding spaces"){
@@ -101,36 +101,21 @@ function getmenu() {
                 food_card.appendChild(desc_div);
 
                 // add the footer div here
-                
                 let add_div = document.createElement("div")
                 add_div.setAttribute("class","add");
-                add_div.setAttribute("id", "add-btn")
-                let input = document.createElement("p");
-                input.textContent= "Place Order"
+                let form = document.createElement("form");
+                let input = document.createElement("input");
+                input.setAttribute("type", "submit");
+                input.setAttribute("class","view")
                 input.setAttribute("id", menu_item["food_name"]);
+                input.setAttribute("value", "Place order");
                 input.setAttribute("onclick", "order_model(this)");
-                // form.appendChild(input);
-                // add_div.appendChild(form);
-                // food_card.appendChild(add_div);
+                form.appendChild(input);
                 
-            
-                // let a_tag = document.createElement("a");
-                // a_tag.setAttribute("href","#");
-                // a_tag.setAttribute("class", "view");
-                // a_tag.setAttribute("id", "view");
-                // a_tag.setAttribute("onclick", view_model);
-                // a_tag.textContent="View more"
-                // form.appendChild(a_tag);
                 add_div.appendChild(input);
                 food_card.appendChild(add_div);
-
-
-                // <a href = "#" class = "view" id ="view" 
-                // onclick = "document.getElementById('food').style.display = 'block'">view more</a>
-
-
                 foods.appendChild(food_card);
-                // console.log(menu_items[count]);
+        
             }
         
         })
