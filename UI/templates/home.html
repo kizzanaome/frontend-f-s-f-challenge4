@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3f</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/home.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/viewMore.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/history.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/order.css" />
+
+</head>
+<body>
+    <header>
+        <div class="logo"><p>3F</p></div>
+        <div class="title">
+            <h4>FAST FOODS FAST</h4>
+            <h5>3fs service gets you what you need, right when you need it
+            </h5>
+        </div>
+        <div class="icons">
+            <nav>
+                <a href = "#">Home</a>
+                <a href = "#" id = "history-btn" onclick = "document.getElementById('history').style.display ='block'">History</a>
+                <a href = "../../index.html">Logout</a>
+                <div class="profile"></div>
+
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+
+        
+        <div class="img-div" id = "slider">
+            <section>
+                    <img src="../static/images/1.jpg" />
+                    <img src="../static/images/bg.png" />
+                    <img src="../static/images/fish.jpg" />
+                    <img src="../static/images/rolex.jpg" />
+                    <img src="../static/images/bg1.png" />
+            </section>
+        </div>
+
+
+        <!--<div class="description">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <h5>Lorem ipsum dolor sit amet</h5>
+            <ul>
+                <li><i class = "fa fa-check"></i>Affordable Prices</li>
+                <li><i class = "fa fa-check"></i>Enjoy Amazing Discounts</li>
+                <li><i class = "fa fa-check"></i>Best services ever</li>
+                <li><i class = "fa fa-check"></i>It is simple.... Just click<span>signup</span> <br>&nbsp;&nbsp;&nbsp;or simply<span>login </span> if already with us!</li>
+            </ul>
+        </div>-->
+
+        <div class="content">
+            <!--menu-->
+            <div class="side-menu">
+                <ul>
+                    <li><a href="#">Categories</a>
+                        <ul>
+                            <li><a href = "#">Local food</a></li>
+                            <li><a href = "#">Drinks</a></li>
+                            <li><a href = "#">Dessert Recipes </a></li>
+                        </ul>
+                    </a>
+                </ul>
+            </div>
+            <!--Foods-->
+            <div class="content-wrapper">
+                <div class="search">
+                    <form action="#">
+                        <input type="text" name="" placeholder="search food"/>
+                        <input id = "search-btn" type="submit" value = "search" />
+                    </form>
+                </div>
+                <div id="foods" class="foods">
+<!-- 
+                    food card -->
+                    
+    <!--food modal-->
+
+    <div id="food" class="modal">
+  
+            <form class="modal-content animate">
+          
+              <div class="container">
+                            <div class="view-img">
+                                <img src = "../static/images/bg1.png" alt = "food"/>                            </div>
+                            <div class="food-desc">
+
+                                    <div class="desc">
+                                            <h5>Food: <span>Pizza</span></h5>
+                                            <h5>Price : <span>UgX 50000</span></h5>
+                                        </div>
+                                <p>Description</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, deserunt corporis fugiat nam eum recusandae deleniti suscipit beatae fugit quas consectetur. Dolore aliquid nihil voluptate libero obcaecati nemo, commodi ipsam.</p>
+                            </div>
+                 </div>
+
+              <div class="container">
+                    <button type="button" onclick="document.getElementById('food').style.display='none'" class="cancelbtn">Back</button>
+                  </div>
+
+            </form>
+          </div>
+
+          <!--order model-->
+          <div id="order" class="modal">
+  
+                <form class="modal-content animate" id ="placeorder" method="POST">
+              
+                  <div class="container">
+                            <h1>Place an Order</h1>
+                            
+                            <br /><label for="">Name of food</label>
+                            <br /><input type="text" name = "" id = "food_name" minlength="5" disabled  required/>
+
+                            <label for = "qty">Quantity</label><br />
+                                <input type="number" name = "" id  = "quantity" /><br />
+
+                                <label for = "city">Location </label><br />
+                                <select name="" id ="location">
+                                        <option>---select city---</option>
+                                    <option>Kampala</option>
+                                    <option>Entebbe</option>
+                                </select>
+
+                            <input type="submit" id = "submit" value = "submit order">
+                     </div>
+    
+                  <div class="container">
+                        <button type="button" onclick="document.getElementById('order').style.display='none'" class="cancelbtn">Back</button>
+                      </div>
+    
+                </form>
+              </div>
+
+              <!--HISTORY MODEL-->
+
+    <div id="history" class="modal">
+             <form class="modal-content animate">
+              <div class="container" id= "right-hist">
+                         
+                 </div>
+              <div class="container">
+                    <button type="button" onclick="document.getElementById('history').style.display='none'" class="cancelbtn">Back</button>
+                  </div>
+
+            </form>
+    </div>
+          
+        <script src = "../static/js/home.js"></script>
+        <script src = "../static/js/login.js"></script>  
+        <script src = "../static/js/signup.js"></script> 
+        <script src = "../static/js/show.js"></script>
+        <script src = "../static/js/order.js"></script>
+        <script src = "../static/js/history.js"></script>
+</body>
+</html>
