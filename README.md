@@ -11,7 +11,7 @@ Fast-Food-Fast is a food delivery service app for a restaurant.
  - The admin can accept and decline orders
  
 ## Click here to view the project demo pages
-[Fast-Food-Fast](https://kizzanaome.github.io/Fast-Food-Fast/)
+[Fast-Food-Fast](https://kizzanaome.github.io/frontend-f-s-f-challenge4/)
 
 ## Built Using
 - [HTML](https://html.com/) - Markup language
@@ -21,6 +21,7 @@ Fast-Food-Fast is a food delivery service app for a restaurant.
 ## Usage
 - User first has to create an account.
 - User can then login and have access to all the other parts of the app.
+
 
 ## Authors
 - [kizzanaome](https://github.com/kizzanaome)
